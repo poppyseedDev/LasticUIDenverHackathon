@@ -1,85 +1,45 @@
-# LasticUI
-
-Welcome to the **LasticUI** repository! This repository is dedicated to enabling seamless interaction with the Coretime Parachain.
-
-## 🌿 Branch Structure
-
-There are 3 main branches that are relevant:
-
-- `development` - this branch contains most recent development
-- `main` - this branch is features deployments that have yet to be tested and released to the public. The deployment of [main branch inside folder `./static-frontend`](https://github.com/LasticXYZ/LasticUI/tree/main/static_frontend) can be also accessed on [test.lastic.xyz](https://test.lastic.xyz/)
-- `stable` - features the stable branch that is tested, this is the branch that is deployed on [lastic.xyz](https://lastic.xyz/)
-
-## 📁 Directory Overview
-
-The repository is organized into two primary directories:
-
-1. `./static-frontend`:
-   - Contains the static frontend integrated with wallet connection functionality.
-   - Serves as the boilerplate code that will evolve into the official Lastic website.
-   - Design mirrors what's showcased in the `Figma UI`. As of now, the graphs are populated with mockup data.
-
-### 🚚 Repository Migration
-
-- `./core_chain_sdk` has moved! Check out [LasticSDK](https://github.com/LasticXYZ/lastic-sdk) for the SDK development tailored for Coretime chain interactions.
-
-## 🚀 Quick Start
-
-## Getting Started
-
-To set up and run the project, follow the steps below:
-
-```bash
-# Install the required dependencies
-pnpm install
-```
-
-Copy the `.env.local.example` and rename it to `.env.local`. If you are using Subscan create a subscan public token and add it here: NEXT_PUBLIC_SUBSCAN_TOKEN='...'.
-
-Set up the environmental variables, copy and rename `.env.local.example`.
-
-```
-# Start the development server
-pnpm run dev
-```
-
-## Visual Resources
-
-### Flow Chart:
-
-Click on the image below to access the full-sized flow chart:
-
-[Click to visit Flow Chart](https://www.figma.com/file/aFn15lyvti5hqLJBNUDZlU/Lastic-Flow-Chart-%231?type=whiteboard&node-id=0%3A1&t=ZiWNv9gRsH68D5Km-1)
-
-![FLOW CHART](https://github.com/LasticXYZ/LasticUI/assets/30662672/a08dd7b3-bc14-4d51-9689-75bac7895b26)
-
-### Figma UI:
-
-After launching, navigate to Options > Fit Width for the best view.
-[Click to visit Figma UI](https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FYzHexLzhb9Q4FPkM19cl1y%2FLastic%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D203-897%26viewport%3D1012%252C165%252C0.06%26t%3DFBfVL9tIBH4OQJ1A-1%26scaling%3Dmin-zoom%26starting-point-node-id%3D203%253A897%26mode%3Ddesign)
+# Lastic Integration with Polkadot and Moonbeam
 
 ![FIGMA UI](https://github.com/LasticXYZ/LasticUI/assets/30662672/442e1f73-8bd9-48a2-8139-1057ec2dddd1)
 
-## Articles
+## Overview
 
-Articles to check out:
+Lastic is at the forefront of integrating cutting-edge blockchain technologies, specifically within the Polkadot ecosystem. The shift from traditional auction-based core leasing to a dynamic buy-and-sell model presents unique opportunities and challenges. Lastic leverages this by offering a platform to trade core time effectively, utilizing the capabilities of Moonbeam and Moonriver as EVM-compatible chains for deploying smart contracts.
 
-- [Unlocking the Future of Blockspace](https://medium.com/lastic-marketplace/unlocking-the-future-of-blockspace-introducing-lastic-9036b9d6637)
-- [The Genesis of Lastic](https://medium.com/lastic-marketplace/the-genesis-of-lastic-a-coretime-marketplace-for-polkadot-75130e40306c)
-- [Simplifying RFC-1: Understanding Agile Coretime for the Polkadot Network](https://medium.com/lastic-marketplace/the-genesis-of-lastic-a-coretime-marketplace-for-polkadot-75130e40306c)
-- [Polkadot 2.0: A New Era of Decentralization](https://medium.com/lastic-marketplace/polkadot-2-0-a-new-era-of-decentralization-d5626a6e63e5)
-- [Unraveling Agile Coretime: Polkadot’s Innovative Resource Allocation](https://medium.com/lastic-marketplace/unraveling-agile-coretime-polkadots-innovative-resource-allocation-2c025d0daa59)
+This project is a proof of concept developed during a hackathon aimed at exploiting the scarcity and value of cores in the blockchain space. We have developed an English auction-style smart contract to facilitate the trading of core time, integrating innovative features such as NFT masking to enhance privacy and security.
 
-# Lastic Static Frontend
+## Features
 
-This repository contains the boilerplate code for the Lastic website. The frontend is designed to integrate with wallet connection functionality and is based on the designs showcased in the `Figma UI`.
+- **Dual UI Compatibility**: Supports both Ethereum-style and Polkadot-style wallet addresses, offering a seamless experience for users of both blockchain ecosystems.
+- **Smart Contract Development**: Utilizes Foundry for robust smart contract development and deployment on Moonbase Alpha, with front-end interaction facilitated by Wagmi.
+- **Cross-Chain Interaction**: Employs the `lastic-sdk` and `xcm-sdk` for efficient cross-chain messaging and transactions, maintaining core integrity on the Coretime chain while executing transactions on Moonbeam (_Yet to be implemented_).
 
-Functionality:
+## How It Works
 
-- Houses the static frontend with wallet connection features.
-- Will be further developed into the official Lastic website.
-- The design closely follows the `Figma UI`. Currently, the graphs use mockup data for demonstration.
+1. **Core Acquisition**: Users purchase core time during designated periods.
+2. **Auction Creation**: Sellers can divide their core time into multiple segments and list them for auction on Lastic.
+3. **Transaction Execution**: Through interactions with the Lastic smart contracts on Moonbeam or Moonriver, users can auction their core time. An XCM call is triggered to transfer the core, ensuring it remains within the Coretime chain while transaction fees are executed on Moonbeam.
 
-## Project Framework
+## Getting Started
 
-This project is built using [Next.js](https://nextjs.org/), uses pnpm and Tailwind css.
+To start using the Lastic platform for your core trading needs, follow these simple steps:
+
+1. Install dependencies:
+   ```shell
+   pnpm install
+   ```
+
+2. Set up the environment:
+   ```shell
+   cp .env.local.example .env.local
+   ```
+
+3. Start the development server:
+   ```shell
+   pnpm run dev
+   ```
+
+## Limitations and Opportunities
+
+While the move to a buy-and-sell model for cores opens new avenues for trading and utilization, it also introduces challenges, particularly in smart contract deployment and interaction within the Coretime chain. Our solution, leveraging Moonbeam and Moonriver, provides a viable workaround, facilitating seamless interactions and transactions while maintaining the integrity and security of core assets.
+
