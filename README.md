@@ -1,6 +1,13 @@
-# Lastic Integration with Polkadot and Moonbeam
+# Lastic Integration with Polkadot and Moonbeam## Project Images
 
 ![FIGMA UI](https://github.com/LasticXYZ/LasticUI/assets/30662672/442e1f73-8bd9-48a2-8139-1057ec2dddd1)
+
+<p align="center">
+  <img src="https://github.com/poppyseedDev/LasticUIDenverHackathon/assets/30662672/b93c4eac-ccf7-48fa-97b5-b2a0279cbcab" width="200" alt="Image description" />
+  <img src="https://github.com/poppyseedDev/LasticUIDenverHackathon/assets/30662672/0b525773-fa80-4af9-881d-731fe9bf4749" width="200" alt="Image description" />
+  <img src="https://github.com/poppyseedDev/LasticUIDenverHackathon/assets/30662672/5f7f6852-d725-451d-87cc-08a8510c2734" width="200" alt="Image description" />
+</p>
+
 
 ## Overview
 
